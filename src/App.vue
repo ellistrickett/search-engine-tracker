@@ -1,17 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <SearchBox @search="handleSearch" />
+    <div v-if="searchResult">
+      <p>Search Result: {{ searchResult }}</p>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SearchBox from "@/components/SearchBox.vue"; // Adjust the path based on your folder structure
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    SearchBox,
+  },
+  data() {
+    return {
+      searchResult: "",
+    };
+  },
+  methods: {
+    handleSearch(searchTerm) {
+      this.searchResult = searchTerm;
+    },
+    handleSearchError(errorMessage) {
+      this.searchResult = errorMessage;
+    },
+  },
+};
 </script>
 
 <style>
