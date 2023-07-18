@@ -8,7 +8,7 @@
                         placeholder="land registry searches" />
                 </div>
                 <div class="input-group">
-                    <label for="searchPhrase">TargetUrl:</label>
+                    <label for="searchPhrase">Target Url:</label>
                     <input type="text" v-model="targetUrl" @keyup.enter="handleSearchInput"
                         placeholder="www.example.co.uk" />
                 </div>
