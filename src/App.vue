@@ -1,5 +1,5 @@
 <template>
-    <SearchBox @search="handleSearch" />
+    <SearchBox @search="handleSearch"  @searchError="handleSearchError" />
     <div v-if="searchResult">
       <p>Search Result: {{ searchResult }}</p>
     </div>
