@@ -1,7 +1,7 @@
 <template>
     <SearchBox @search="handleSearch"  @searchError="handleSearchError" />
     <div v-if="searchResult">
-      <p>Search Result: {{ searchResult }}</p>
+      <p>The target url appears at the following positions in Google Search: {{ searchResult }}</p>
     </div>
 </template>
 
